@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BonLivraison.BonLivraisonController">
+   <children>
+      <VBox layoutY="14.0" prefHeight="200.0" prefWidth="100.0" spacing="13.0">
+         <children>
+            <Label prefHeight="31.0" prefWidth="86.0" text="Numéro du bon" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="86.0" text="Référence" />
+            <Label layoutX="10.0" layoutY="41.0" prefHeight="31.0" prefWidth="86.0" text="Client" />
+            <Label layoutX="10.0" layoutY="72.0" prefHeight="25.0" prefWidth="120.0" text="Adresse Livraison" />
+         </children>
+      </VBox>
+      <VBox layoutX="100.0" layoutY="23.0" prefHeight="200.0" prefWidth="241.0" spacing="15.0">
+         <children>
+            <TextField fx:id="tfnum" />
+            <TextField fx:id="tfref" layoutX="10.0" layoutY="10.0" />
+            <ComboBox fx:id="tfclient" onAction="#selectClient" prefWidth="150.0" />
+            <TextField fx:id="tfadresse" layoutX="10.0" layoutY="60.0" />
+         </children>
+      </VBox>
+      <Label layoutX="391.0" layoutY="31.0" prefHeight="36.0" prefWidth="100.0" text="Date de création" />
+      <Label layoutX="391.0" layoutY="67.0" prefHeight="36.0" prefWidth="100.0" text="Date de Livraison" />
+      <TextField fx:id="tfdatecr" layoutX="498.0" layoutY="37.0" />
+      <DatePicker fx:id="tfdateliv" layoutX="498.0" layoutY="73.0" />
+      <Label layoutX="391.0" layoutY="105.0" prefHeight="36.0" prefWidth="129.0" text="info supplementaire" />
+      <TextArea fx:id="tfinfo" layoutX="428.0" layoutY="141.0" prefHeight="94.0" prefWidth="200.0" />
+      <Button fx:id="btnvalider" layoutX="603.0" layoutY="644.0" mnemonicParsing="false" onMouseClicked="#validerBL" prefHeight="36.0" prefWidth="123.0" text="Valider" />
+      <Label layoutX="14.0" layoutY="300.0" prefHeight="17.0" prefWidth="70.0" text="Code Article" />
+      <Label layoutX="100.0" layoutY="300.0" prefHeight="17.0" prefWidth="149.0" text="Designation" />
+      <TextField fx:id="tcCodeArticle" layoutX="10.0" layoutY="327.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="tcDesignation" layoutX="100.0" layoutY="327.0" />
+      <Label layoutX="258.0" layoutY="300.0" prefHeight="17.0" prefWidth="92.0" text="PV UV HT" />
+      <TextField fx:id="tcPVUVHT" layoutX="258.0" layoutY="327.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="341.0" layoutY="300.0" prefHeight="17.0" prefWidth="92.0" text="Qte a Livrer" />
+      <TextField fx:id="tcQte" layoutX="341.0" layoutY="327.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="419.0" layoutY="300.0" prefHeight="17.0" prefWidth="92.0" text="Poids Unitaire" />
+      <TextField fx:id="tcPoidsU" layoutX="421.0" layoutY="327.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="511.0" layoutY="300.0" prefHeight="17.0" prefWidth="92.0" text="TVA" />
+      <TextField fx:id="tcTVA" layoutX="498.0" layoutY="327.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="575.0" layoutY="300.0" prefHeight="17.0" prefWidth="92.0" text="Remise" />
+      <TextField fx:id="tcRemise" layoutX="575.0" layoutY="327.0" prefHeight="25.0" prefWidth="62.0" />
+      <TableView fx:id="article" layoutX="5.0" layoutY="384.0" onMouseClicked="#selectArticle" prefHeight="151.0" prefWidth="844.0">
+        <columns>
+          <TableColumn fx:id="CodeArticle" prefWidth="75.0" text="Code Article" />
+          <TableColumn fx:id="Designation" prefWidth="153.0" text="Désignation" />
+            <TableColumn fx:id="PrixUHT" prefWidth="61.0" text="PV UV HT" />
+            <TableColumn fx:id="Qte" prefWidth="73.0" text="Qte a Livrer" />
+            <TableColumn fx:id="PoidsU" prefWidth="86.0" text="Poids Unitaire" />
+            <TableColumn fx:id="tva" prefWidth="87.0" text="TVA" />
+            <TableColumn fx:id="Remise" prefWidth="92.0" text="Remise" />
+            <TableColumn fx:id="totalHT" prefWidth="75.0" text="Totale HT" />
+            <TableColumn fx:id="totalTTC" prefWidth="75.0" text="Totale TTC" />
+            <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+        </columns>
+      </TableView>
+      <Button fx:id="insererArticle" layoutX="32.0" layoutY="258.0" mnemonicParsing="false" onMouseClicked="#ajouterArticle" text="Inserer un article" />
+      <Button fx:id="modifierArticle" layoutX="153.0" layoutY="258.0" mnemonicParsing="false" onMouseClicked="#modifierArticle" text="Modifier article" />
+      <Button fx:id="supprimerArticle" layoutX="271.0" layoutY="258.0" mnemonicParsing="false" onMouseClicked="#supprimerArticle" text="Supprimer article" />
+      <TextField fx:id="tfid" editable="false" layoutX="652.0" layoutY="327.0" prefHeight="25.0" prefWidth="47.0" />
+      <Label layoutX="653.0" layoutY="300.0" prefHeight="17.0" prefWidth="92.0" text="ID" />
+   </children>
+</AnchorPane>

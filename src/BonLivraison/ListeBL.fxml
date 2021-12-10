@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BonLivraison.ListeBLController">
+   <children>
+      <Label layoutX="47.0" layoutY="57.0" prefHeight="56.0" prefWidth="253.0" text="Liste des Bon de Livraisons" />
+      <TableView fx:id="tvblListe" editable="true" layoutX="25.0" layoutY="144.0" prefHeight="200.0" prefWidth="717.0">
+        <columns>
+            <TableColumn fx:id="tvselect" prefWidth="75.0" resizable="false" sortable="false" text="Select">
+            	<cellValueFactory><PropertyValueFactory property="checked" /></cellValueFactory>
+				<!--  <cellFactory><CheckBoxCellFactory /></cellFactory> -->
+			</TableColumn>	
+          <TableColumn fx:id="tvnumero" prefWidth="109.0" text="Numero Du Bon" />
+          <TableColumn fx:id="tvref" prefWidth="160.0" text="Reference" />
+            <TableColumn fx:id="tvTotaleHT" prefWidth="113.0" text="Totale HT" />
+            <TableColumn fx:id="tvTotaleTTC" prefWidth="116.0" text="Totale TTC" />
+            <TableColumn fx:id="tvDateLivraison" prefWidth="120.0" text="Date De Livraison" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelnom" layoutX="384.0" layoutY="57.0" prefHeight="56.0" prefWidth="253.0" text="Client" />
+      <TextField fx:id="tfnom" editable="false" layoutX="421.0" layoutY="73.0" />
+      <Button fx:id="btnDelete" layoutX="552.0" layoutY="479.0" mnemonicParsing="false" onAction="#delete" prefHeight="56.0" prefWidth="126.0" text="Passer Au Facture" />
+      <Button fx:id="btnAjouter" layoutX="552.0" layoutY="406.0" mnemonicParsing="false" onAction="#ajouterAuFacture" prefHeight="56.0" prefWidth="126.0" text="Ajouter Au Facture" />
+   </children>
+</AnchorPane>

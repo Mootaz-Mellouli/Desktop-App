@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Facture.FactureController">
+   <children>
+      <VBox layoutX="38.0" layoutY="25.0" prefHeight="200.0" prefWidth="113.0">
+         <children>
+            <Label prefHeight="41.0" prefWidth="114.0" text="Numéro Facture" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="114.0" text="Référence" />
+            <Label layoutX="10.0" layoutY="51.0" prefHeight="41.0" prefWidth="114.0" text="Client" />
+         </children>
+      </VBox>
+      <VBox layoutX="172.0" layoutY="25.0" prefHeight="200.0" prefWidth="122.0" spacing="15.0">
+         <children>
+            <TextField fx:id="tfNumFac" />
+            <TextField fx:id="tfRefFac" layoutX="10.0" layoutY="10.0" />
+            <ComboBox fx:id="tfClient" prefWidth="150.0" />
+         </children>
+      </VBox>
+      <DatePicker fx:id="tfDateCreation" layoutX="675.0" layoutY="56.0" />
+      <Label layoutX="574.0" layoutY="61.0" prefHeight="21.0" prefWidth="101.0" text="Date création" />
+      <Label layoutX="77.0" layoutY="344.0" text="Code" />
+      <Label layoutX="153.0" layoutY="344.0" text="Désignation" />
+      <TableView fx:id="tvArticle" layoutX="15.0" layoutY="454.0" onMouseClicked="#selectArticle" prefHeight="200.0" prefWidth="969.0">
+        <columns>
+            <TableColumn fx:id="tvNumFac" prefWidth="98.0" text="Numero Facture" />
+          <TableColumn fx:id="tvCode" prefWidth="75.0" text="Code" />
+          <TableColumn fx:id="tvDesignation" prefWidth="112.0" text="Désignation" />
+            <TableColumn fx:id="tvPUHT" prefWidth="98.0" text="PU HT" />
+            <TableColumn fx:id="tvQte" prefWidth="98.0" text="Qte" />
+            <TableColumn fx:id="tvPoidsU" prefWidth="98.0" text="Poids U" />
+            <TableColumn fx:id="tvTVA" prefWidth="98.0" text="TVA" />
+            <TableColumn fx:id="tvTotaleHT" prefWidth="98.0" text="TotaleHT" />
+            <TableColumn fx:id="tvTotaleTTC" prefWidth="98.0" text="TotaleTTC" />
+            <TableColumn fx:id="tvID" prefWidth="98.0" text="ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnInsererArticle" layoutX="142.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#insererArticle" prefHeight="41.0" prefWidth="113.0" text="Inserer Article" />
+      <Button fx:id="btnmodifierarticle" layoutX="282.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#modifierArticle" prefHeight="41.0" prefWidth="134.0" text="Modifier Article" />
+      <Button fx:id="btnsupprimerarticle" layoutX="438.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#supprimerArticle" prefHeight="41.0" prefWidth="147.0" text="Supprimer Article" />
+      <TextField fx:id="tfCode" layoutX="71.0" layoutY="369.0" prefHeight="31.0" prefWidth="69.0" />
+      <TextField fx:id="tfDesignation" layoutX="153.0" layoutY="369.0" prefHeight="31.0" prefWidth="113.0" />
+      <TextField fx:id="tfPUHT" layoutX="280.0" layoutY="369.0" prefHeight="31.0" prefWidth="69.0" />
+      <Label layoutX="284.0" layoutY="344.0" text="PUHT" />
+      <TextField fx:id="tfQte" layoutX="369.0" layoutY="369.0" prefHeight="31.0" prefWidth="69.0" />
+      <TextField fx:id="tfPoidsU" layoutX="450.0" layoutY="369.0" prefHeight="31.0" prefWidth="69.0" />
+      <TextField fx:id="tfTVA" layoutX="537.0" layoutY="369.0" prefHeight="31.0" prefWidth="69.0" />
+      <TextField fx:id="tfID" layoutX="617.0" layoutY="369.0" prefHeight="31.0" prefWidth="69.0" />
+      <Label layoutX="366.0" layoutY="344.0" text="Qte" />
+      <Label layoutX="450.0" layoutY="344.0" text="PoidsU" />
+      <Label layoutX="537.0" layoutY="344.0" text="TVA" />
+      <Label layoutX="617.0" layoutY="344.0" text="ID" />
+      <TextField fx:id="tfTotaleHTGen" layoutX="153.0" layoutY="694.0" prefHeight="31.0" prefWidth="113.0" />
+      <TextField fx:id="tfTotaleTTCGen" layoutX="360.0" layoutY="694.0" prefHeight="31.0" prefWidth="113.0" />
+      <Label layoutX="82.0" layoutY="699.0" text="TotaleHT" />
+      <Label layoutX="282.0" layoutY="699.0" text="TotaleTTC" />
+      <Button fx:id="btnValider" layoutX="678.0" layoutY="674.0" mnemonicParsing="false" onMouseClicked="#validerFacture" prefHeight="48.0" prefWidth="113.0" text="Valider" />
+      <Button fx:id="btnAnnuler" layoutX="809.0" layoutY="675.0" mnemonicParsing="false" onMouseClicked="#quitter" prefHeight="48.0" prefWidth="113.0" text="Annuler" />
+   </children>
+</AnchorPane>

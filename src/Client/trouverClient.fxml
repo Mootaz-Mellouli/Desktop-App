@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.trouverClientController">
+   <children>
+      <TableView fx:id="tvclient" layoutX="14.0" layoutY="119.0" onMouseClicked="#selectClient" prefHeight="219.0" prefWidth="631.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="63.0" text="Id" />
+				<TableColumn fx:id="colnom" prefWidth="105.0" text=" Nom" />
+				<TableColumn fx:id="colprenom" prefWidth="110.0" text="Prenom" />
+				<TableColumn fx:id="coltel" prefWidth="113.0" text="Téléphone" />
+            <TableColumn fx:id="colmail" prefWidth="147.0" text="Email" />
+            <TableColumn fx:id="colcode" prefWidth="75.0" text="Code Client" />
+        </columns>
+      </TableView>
+      <VBox layoutX="23.0" layoutY="353.0" prefHeight="234.0" prefWidth="80.0">
+         <children>
+            <Label prefHeight="39.0" prefWidth="73.0" text="Id" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="73.0" text="Nom" />
+            <Label layoutX="10.0" layoutY="49.0" prefHeight="39.0" prefWidth="73.0" text="Prenom" />
+            <Label layoutX="10.0" layoutY="88.0" prefHeight="39.0" prefWidth="73.0" text="Téléphone" />
+            <Label layoutX="10.0" layoutY="127.0" prefHeight="42.0" prefWidth="73.0" text="Email" />
+            <Label prefHeight="39.0" prefWidth="73.0" text="Code Client" />
+         </children></VBox>
+      
+      <VBox layoutX="109.0" layoutY="367.0" prefHeight="227.0" prefWidth="182.0" spacing="12.0">
+         <children>
+            <TextField fx:id="tfid" />
+            <TextField fx:id="tfnom" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tfprenom" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tftel" layoutX="10.0" layoutY="60.0" />
+            <TextField fx:id="tfmail" layoutX="10.0" layoutY="85.0" />
+            <TextField fx:id="tfcode" />
+         </children></VBox>
+      <Button fx:id="btnmodifier" layoutX="63.0" layoutY="608.0" mnemonicParsing="false" onMouseClicked="#modifier" prefHeight="39.0" prefWidth="104.0" text="Modifier" />
+      <Button fx:id="btnsuprrimer" layoutX="200.0" layoutY="608.0" mnemonicParsing="false" onMouseClicked="#supprimer" prefHeight="39.0" prefWidth="104.0" text="Supprimer" />
+      <Button fx:id="btnListeBL" layoutX="409.0" layoutY="442.0" mnemonicParsing="false" onMouseClicked="#afficherListe" prefHeight="39.0" prefWidth="159.0" text="Liste Des Bon De Livraison" />
+   </children>
+</AnchorPane>

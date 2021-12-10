@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+   <children>
+      <MenuBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Client">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addClient" text="Ajouter" />
+                <MenuItem mnemonicParsing="false" onAction="#trouverClient" text="Trouver" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Fournisseur">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#AjouterFournisseur" text="Ajouter" />
+                  <MenuItem mnemonicParsing="false" onAction="#trouverFournisseur" text="Trouver" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Article">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#trouverArticle" text="Trouver" />
+                  <MenuItem mnemonicParsing="false" onAction="#ajouterArticle" text="Ajouter" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Créer">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#CreerBonLivraison" text="Bon Livraison" />
+                  <MenuItem mnemonicParsing="false" onAction="#CreerBonReception" text="Bon Reception" />
+                  <MenuItem mnemonicParsing="false" onAction="#CreerDevis" text="Devis" />
+                  <MenuItem mnemonicParsing="false" onAction="#CreerFacture" text="Facture" />
+               </items>
+            </Menu>
+        </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuBar>
+      <Button contentDisplay="TOP" layoutX="97.0" layoutY="81.0" mnemonicParsing="false" onAction="#addClient" prefHeight="77.0" prefWidth="146.0" text="Nouveau Client" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="USER_PLUS" size="35" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="288.0" layoutY="81.0" mnemonicParsing="false" onAction="#trouverClient" prefHeight="77.0" prefWidth="146.0" text="Trouver Client" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="SEARCH" size="30" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="474.0" layoutY="81.0" mnemonicParsing="false" onAction="#trouverClient" prefHeight="77.0" prefWidth="146.0" text="Supprimer Client" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="USER_TIMES" size="35" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="97.0" layoutY="187.0" mnemonicParsing="false" onAction="#ajouterArticle" prefHeight="77.0" prefWidth="146.0" text="Nouveau Article" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="CART_PLUS" size="40" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="288.0" layoutY="187.0" mnemonicParsing="false" onAction="#trouverArticle" prefHeight="77.0" prefWidth="146.0" text="Trouver Article" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="SEARCH" size="30" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="474.0" layoutY="187.0" mnemonicParsing="false" onAction="#trouverArticle" prefHeight="77.0" prefWidth="146.0" text="Supprimer Article" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="CART_ARROW_DOWN" size="40" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="97.0" layoutY="300.0" mnemonicParsing="false" onAction="#AjouterFournisseur" prefHeight="77.0" prefWidth="146.0" text="Nouveau Fournisseur" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="USER_PLUS" size="35" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="288.0" layoutY="300.0" mnemonicParsing="false" onAction="#trouverFournisseur" prefHeight="77.0" prefWidth="146.0" text="Trouver Fournisseur" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="SEARCH" size="30" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="474.0" layoutY="300.0" mnemonicParsing="false" onAction="#trouverFournisseur" prefHeight="77.0" prefWidth="146.0" text="Supprimer Fournisseur" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="USER_TIMES" size="35" />
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="288.0" layoutY="405.0" mnemonicParsing="false" onAction="#CreerBonLivraison" prefHeight="77.0" prefWidth="146.0" text="Bon De Reception" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="FILE_TEXT_ALT" size="35" />
+         </graphic>
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="97.0" layoutY="405.0" mnemonicParsing="false" onAction="#CreerBonReception" prefHeight="77.0" prefWidth="146.0" text="Bon De Livraison" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="FILE_TEXT_ALT" size="35" />
+         </graphic>
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="474.0" layoutY="405.0" mnemonicParsing="false" onAction="#CreerDevis" prefHeight="77.0" prefWidth="146.0" text="Devis" textFill="#3f7cba">
+         <graphic>
+            <FontAwesomeIconView fill="#598cc3" glyphName="FILE_TEXT_ALT" size="35" />
+         </graphic>
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
